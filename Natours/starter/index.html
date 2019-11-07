@@ -43,7 +43,7 @@
             <span class="heading-primary--sub">is where life happens</span>
           </h1>
 
-          <a href="#"class="btn btn--white btn--animated">Discover about our tours</a>
+          <a href="#section-tours"class="btn btn--white btn--animated">Discover about our tours</a>
         </div>
       </header>
 <!-- 
@@ -143,13 +143,28 @@
               </div>
               <div class="col-1-of-2">
                 <div class="composition">
-                  <img src="img/nat-1-large.jpg" alt="Photo 1" class="composition__photo composition__photo--p1">
-                </div>
-                <div class="composition">
+
+                  <img srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w"
+                       sizes="(max-width: 56.25em) 20vw, (max-width:37.5em) 3vw, 300px"
+                       alt="Photo 1"
+                       class="composition__photo composition__photo--p1"
+                       src="img/nat-1-large.jpg">
+
+                  <img srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w"
+                       sizes="(max-width: 56.25em) 20vw, (max-width:37.5em) 3vw, 300px"
+                       alt="Photo 2"
+                       class="composition__photo composition__photo--p2"
+                       src="img/nat-2-large.jpg">
+
+                  <img srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w"
+                       sizes="(max-width: 56.25em) 20vw, (max-width:37.5em) 3vw, 300px"
+                       alt="Photo 3"
+                       class="composition__photo composition__photo--p3"
+                       src="img/nat-3-large.jpg">
+
+                  <!-- <img src="img/nat-1-large.jpg" alt="Photo 1" class="composition__photo composition__photo--p1">
                   <img src="img/nat-2-large.jpg" alt="Photo 2" class="composition__photo composition__photo--p2">
-                </div>
-                <div class="composition">
-                  <img src="img/nat-3-large.jpg" alt="Photo 3" class="composition__photo composition__photo--p3">
+                  <img src="img/nat-3-large.jpg" alt="Photo 3" class="composition__photo composition__photo--p3"> -->
                 </div>
               </div>
             </div>
@@ -196,7 +211,7 @@
 
         </section>
 
-        <section class="section-tours"> 
+        <section class="section-tours" id="section-tours"> 
           <div class="u-center-text u-margin-bottom-big">
             <h2 class="heading-secondary">
               Most popular tours
@@ -230,7 +245,7 @@
                       <div class="card__price-box">
                         <p class="card__price-only">Only</p>
                         <p class="card__price-value">$297</p>
-                        <a href="#" class="btn btn--white">Book Now!</a>
+                        <a href="#popup" class="btn btn--white">Book Now!</a>
                       </div>
                     </div>
                   </div>
@@ -263,7 +278,7 @@
                           <div class="card__price-box">
                             <p class="card__price-only">Only</p>
                             <p class="card__price-value">$497</p>
-                            <a href="#" class="btn btn--white">Book Now!</a>
+                            <a href="#popup" class="btn btn--white">Book Now!</a>
                           </div>
                         </div>
                       </div>
@@ -296,7 +311,7 @@
                       <div class="card__price-box">
                         <p class="card__price-only">Only</p>
                         <p class="card__price-value">$897</p>
-                        <a href="#" class="btn btn--white">Book Now!</a>
+                        <a href="#popup" class="btn btn--white">Book Now!</a>
                       </div>
                     </div>
                   </div>
@@ -415,7 +430,13 @@
 
       <footer class="footer">
         <div class="footer__logo-box">
-          <img src="img/logo-green-small-2x.png" alt="Full logo" class="footer__logo">
+
+          <picture class="footer__logo">
+            <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x"
+                    media="(max-width: 37.5em)">
+            <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="Full logo" src="img/logo-green-2x.png">
+            </picture>
+
         </div>
 
         <div class="row">
@@ -437,5 +458,28 @@
           </div>
         </div>
       </footer>
+
+      <div class="popup" id="popup">
+        <div class="popup__content">
+
+          <div class="popup__left">
+            <img src="img/nat-8.jpg" alt="Tour Photo" class="popup__img">
+            <img src="img/nat-9.jpg" alt="Tour Photo" class="popup__img">
+          </div>
+
+          <div class="popup__right">
+            <a href="#section-tours" class="popup__close">&times;</a>
+            <h2 class="heading-secondary u-margin-bottom-medium">Start Booking Now</h2>
+            
+            <h3 class="heading-teriary u-margin-bottom-small">Important &ndash; please read these terms before booking</h3>
+
+            <p class="popup__text">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem dicta nihil quod minus eum voluptates quia, perferendis accusamus dolores. Blanditiis facere corrupti iusto consectetur, sapiente alias? Minima, cupiditate. Cupiditate, itaque!
+            </p>
+            <a href="#" class="btn btn--green">Book Now</a>
+          </div>
+ 
+        </div>
+      </div>
     </body>
 </html>
